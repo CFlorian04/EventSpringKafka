@@ -44,10 +44,10 @@ public class JobController {
             .toJobParameters();
 
     try {
-      log.info("[Job {} ] running . . .", label);
+      log.info("[Job] {} running . . .", label);
       jobLauncher.run(parJob, locParamJobParameters);
     } catch (Exception ex) {
-        log.error("[RUN JOB {} ERROR] : {}", label, ex.getMessage());
+        log.error("[RUN JOB ERROR] {} : {}", label, ex.getMessage());
     }
   }
 
