@@ -19,10 +19,4 @@ public class LettreController {
     @GetMapping("/getById{id}")
     public Lettre getById(@PathVariable(value = "id") final Integer id) { return repository.findById(id).orElse(null);}
 
-    @GetMapping("/getByCreationDate")
-    public Collection<Lettre> getByCreationDate(@RequestParam(value = "creationDate") Date creationDate) { return repository.findByCreationDate(creationDate); }
-
-    @GetMapping("/getByTreatmentDate/date")
-    public Collection<Lettre> getByTreatmentDate(@RequestParam(value = "treatmentDate") Date treatmentDate) { return repository.findByTreatmentDate(treatmentDate); }
-
 }

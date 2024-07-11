@@ -1,23 +1,25 @@
-# Spring Boot & Spring batch & Spring Cloud Stream & Kafa
+# Projet : Event Spring Boot - Kafka
+
+#### Projet réalisé dans le cadre du cours IEVENT avec [K. AMICHI](https://github.com/KatiaAMICHI)
+
+Bienvenue dans le projet "Introduction à l'événementiel sur une architecture multi-serveur".
+Ce projet vise à implémenter une solution événementielle en utilisant Spring Boot, Spring Batch, Spring Cloud Stream et Kafka.
+
+#### Écosystème du Projet
+Le projet utilise une architecture multi-serveur basée sur Spring Boot. La partie événementielle est gérée par Spring Batch avec Spring Cloud Stream et Kafka.
 
 
-## Lancement du projet
-Téléchargez l’archive du projet et décompressez-la.
+#### Auteurs
 
-### Lancement des serveurs
-#### Serveur “domain”
-Exécuter la classe “AppDomain”
-#### Serveur “server-master”
-Exécuter la classe “JobMasterApp”
-#### Serveur “worker-service”
-Exécuter la classe “WorkerApp”
+- [Florian CODEBECQ](https://github.com/CFlorian04)
+- [Bechir LAHOUEL](https://github.com/bechir-Lahouel)
+- [Kévin CALVO HERNANDEZ](https://github.com/CalvinMP)
 
 
-Si vous souhaitez changer le port des serveurs, vous pouvez modifier la config “server.port” dans le fichier “applications.properties” présent dans tous les serveurs.
+#### Lancement du serveur Kafka :
+- Executer le fichier : **_run.bat_** dans le dossier Kafka
 
-#### Serveur kafka
-Prenez l’archive “kafka-server” et décompressez-la
-Lancer le run.bat à la racine du répertoire Kafka, cela va permettre de lancer le Zookeeper et un broker Kafka
-Deux fenêtres CMD doivent s’ouvrir, sans erreur.
-
-Si le serveur Kafka a des problèmes pour se lancer, supprimer tout le contenu du répertoire “data” dans la racine.
+#### Lancement des serveurs :
+- “domain” : Exécuter la classe “AppDomain”
+- “server-master” : Exécuter la classe “JobMasterApp”
+- “worker-service” : Exécuter la classe “WorkerApp”
