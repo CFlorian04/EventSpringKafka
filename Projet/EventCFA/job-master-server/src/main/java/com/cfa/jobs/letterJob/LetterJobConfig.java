@@ -2,6 +2,7 @@ package com.cfa.jobs.letterJob;
 
 import com.cfa.objects.lettre.Lettre;
 import com.cfa.objects.lettre.LettreRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -24,12 +25,6 @@ public class LetterJobConfig {
 
     @Autowired
     public StepBuilderFactory stepBuilderFactory;
-
-    @Autowired
-    private LettreRepository lettreRepository;
-
-    @Autowired
-    private DataSource dataSource;
 
     @Bean
     public Job letterJob(Step letterStep) {
