@@ -1,20 +1,14 @@
 package com.cfa.customjobservice;
 
-import com.cfa.jobs.simplejob.LetterSink;
 import com.cfa.objects.lettre.Lettre;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.item.ItemProcessor;
-import org.springframework.batch.item.ItemReader;
-import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
-import org.springframework.context.annotation.Bean;
 
 /**
  * Processor.input : to listen msg from job-master-server
