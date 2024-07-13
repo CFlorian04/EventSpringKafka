@@ -41,14 +41,21 @@ public class LetterTaskletSource implements Tasklet {
     @Override
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
 
+        // Lecture du fichier qui contient les messages
         Path path = Paths.get("Projet/EventCFA/letters.txt");
         List<String> lines = Files.readAllLines(path);
 
+        // Pour chaque ligne
         for (String line : lines) {
 
+            // Insertion dans la BDD
             Lettre lettre = this.saveLettre(line);
+
+            // Envoi de la lettre par message
             this.sendLettre(lettre);
 
+
+            // Trace de l'envoi du message dans un fichier output
             Files.write(
                     Paths.get("Projet/EventCFA/output.txt"),
                     Collections.singletonList("[\"" +  lettre.getCreationDate() + "\"] La demande \"" + line + "\" est traitée"),
@@ -59,18 +66,20 @@ public class LetterTaskletSource implements Tasklet {
         return RepeatStatus.FINISHED;
     }
 
+    // Fonction de sauvegarde de la lettre
     private Lettre saveLettre(String contenu) {
         Lettre lettre = new Lettre();
         lettre.setMessage(contenu);
         lettre.setCreationDate(new Date());
         lettre = lettreRepository.save(lettre);
-        log.info("Saving item to database: {}", lettre);
+        log.info("Saving item to database: {}", lettre); // Le log ne s'affiche pas dans la console :(
         return lettre;
     }
 
+    // Fonction d'envoi de la lettre dans un message
     private void sendLettre(Lettre lettre) {
         final Message<Lettre> message = MessageBuilder.withPayload(lettre).build();
         output.send(message);
-        log.info("Sending item to Kafka: {}", lettre);
+        log.info("Sending item to Kafka: {}", lettre); // Le log ne s'affiche pas dans la console :(
     }
 }

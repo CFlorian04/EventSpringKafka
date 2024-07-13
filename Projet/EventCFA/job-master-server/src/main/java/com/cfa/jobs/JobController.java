@@ -7,10 +7,7 @@ import org.springframework.batch.core.JobParameter;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.JobParametersBuilder;
 import org.springframework.batch.core.launch.JobLauncher;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -32,11 +29,13 @@ public class JobController {
 //    runJobB(this.simpleJob, label);
 //  }
 
+  // Requete API pour lancer le job (fichier create_letter_job.bat)
   @RequestMapping("/letter")
   public void letterJob() {
     runJobB(this.letterJob, "letterJob");
   }
 
+  // Run du Job
   private void runJobB(final Job parJob, final String label) {
     final JobParameters locParamJobParameters = new JobParametersBuilder()
             .addParameter("value", new JobParameter(label))

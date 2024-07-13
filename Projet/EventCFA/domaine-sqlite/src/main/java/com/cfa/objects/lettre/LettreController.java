@@ -16,6 +16,7 @@ public class LettreController {
     @GetMapping("/getAll")
     public Collection<Lettre> getAll() { return repository.findAll(); }
 
+
     @GetMapping("/getById{id}")
     public Lettre getById(@PathVariable(value = "id") final Integer id) { return repository.findById(id).orElse(null);}
 
