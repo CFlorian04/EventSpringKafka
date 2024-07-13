@@ -16,3 +16,12 @@
 ["Fri Jul 12 16:11:47 CEST 2024"] La demande "Ceci est le premier message" est traitée
 ["Fri Jul 12 16:11:47 CEST 2024"] La demande "Voici un deuxième message" est traitée
 ["Fri Jul 12 16:11:47 CEST 2024"] La demande "The cake is a lie" est traitée
+["Fri Jul 12 16:30:18 CEST 2024"] La demande "Ceci est le premier message" est traitée
+["Fri Jul 12 16:30:18 CEST 2024"] La demande "Voici un deuxième message" est traitée
+["Fri Jul 12 16:30:18 CEST 2024"] La demande "The cake is a lie" est traitée
+["Fri Jul 12 16:34:16 CEST 2024"] La demande "Ceci est le premier message" est traitée
+["Fri Jul 12 16:34:16 CEST 2024"] La demande "Voici un deuxième message" est traitée
+["Fri Jul 12 16:34:16 CEST 2024"] La demande "The cake is a lie" est traitée
+["Sat Jul 13 16:08:56 CEST 2024"] La demande "Ceci est le premier message" est traitée
+["Sat Jul 13 16:08:56 CEST 2024"] La demande "Voici un deuxième message" est traitée
+["Sat Jul 13 16:08:56 CEST 2024"] La demande "The cake is a lie" est traitée

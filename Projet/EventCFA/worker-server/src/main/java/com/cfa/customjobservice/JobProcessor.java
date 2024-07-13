@@ -1,7 +1,7 @@
 package com.cfa.customjobservice;
 
 
-import com.cfa.jobs.letterJob.LetterSink;
+import com.cfa.jobs.simplejob.LetterSink;
 import com.cfa.objects.lettre.Lettre;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

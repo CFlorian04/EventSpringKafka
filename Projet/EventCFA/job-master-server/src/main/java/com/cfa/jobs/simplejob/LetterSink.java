@@ -1,4 +1,4 @@
-package com.cfa.jobs.letterJob;
+package com.cfa.jobs.simplejob;
 
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.messaging.SubscribableChannel;
